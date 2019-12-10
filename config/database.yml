@@ -1,0 +1,26 @@
+
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  # For details on connection pooling, see Rails configuration guide
+  # http://guides.rubyonrails.org/configuring.html#database-pooling
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+
+development:
+  <<: *default
+  database: watchstore_development
+
+  #
+test:
+  <<: *default
+  database: watchstore_test
+
+
+#   production:
+#     url: <%= ENV['DATABASE_URL'] %>
+#
+production:
+  <<: *default
+  database: watchstore_production
+  username: watchstore
+  password: <%= ENV['WATCHSTORE_DATABASE_PASSWORD'] %>
