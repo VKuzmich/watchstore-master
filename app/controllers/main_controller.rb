@@ -4,6 +4,7 @@ class MainController < ApplicationController
   def index
     @brands = Brand.limit(3)
     @hits  = Product.all.limit(8)
+    #binding.pry
   end
 
   def set_page_options
