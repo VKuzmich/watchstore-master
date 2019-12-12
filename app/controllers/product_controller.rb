@@ -21,7 +21,7 @@ class ProductController < ApplicationController
   def register_visit
     session[:viewed_product] ||= []
     session[:viewed_product] = ([@product.id] + session[:viewed_product])
-                                   .unique
+                                   .uniq
                                    .take(3)
   end
 
