@@ -3,7 +3,7 @@ class ProductController < ApplicationController
   after_action :register_visit, only: [:show]
 
   def show
-    @product.galleries = Product.find(params[:id])
+    @product = Product.find(params[:id])
     set_page_options
   end
   helper_method :recent_products
