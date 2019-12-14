@@ -4,6 +4,8 @@ source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.6.3'
+
+gem 'ancestry'
 gem 'activestorage'
 gem 'bootstrap-sass'
 gem 'breadcrumbs_on_rails'
