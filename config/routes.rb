@@ -5,5 +5,7 @@ Rails.application.routes.draw do
 
   resources :category, only: [:show]
 
+  resources :search, only: [:index]
+
   root to: 'main#index'
 end
