@@ -1,6 +1,8 @@
 <component name="ProjectDictionaryState">
   <dictionary name="vladimirkuzmich">
     <words>
+      <w>activestorage</w>
+      <w>bootsnap</w>
       <w>capybara</w>
       <w>chromedriver</w>
       <w>easydrop</w>
@@ -9,11 +11,14 @@
       <w>glyphicons</w>
       <w>halflings</w>
       <w>imagezoom</w>
+      <w>jbuilder</w>
       <w>launchy</w>
       <w>memenu</w>
       <w>mystyle</w>
       <w>responsiveslides</w>
+      <w>turbolinks</w>
       <w>typeaheader</w>
+      <w>uglifier</w>
     </words>
   </dictionary>
 </component>

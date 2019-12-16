@@ -18,6 +18,7 @@
 
 <%= render 'include/main/top_header' %>
 
+<%= render 'include/main/notifications' %>
 
 <div class="logo">
   <%= link_to root_path do %>
@@ -30,6 +31,8 @@
 <div class="content">
   <%= yield %>
 </div>
+
+
 
 <%= render 'include/main/footer' %>
 <script src="<%= asset_path 'application' %>"></script>
