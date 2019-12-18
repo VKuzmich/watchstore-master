@@ -8,6 +8,4 @@ class CartsController < ApplicationController
     current_cart.destroy
     render :show
   end
-
-
 end

@@ -5,7 +5,7 @@ class User < ApplicationRecord
 
   has_one :cart, dependent: :destroy
 
-  validates :email, presence:  true
+  validates :email, presence: true
   validates :password, presence: true
   
 end

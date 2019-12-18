@@ -4,7 +4,7 @@ require 'rails_helper'
 
 RSpec.describe ItemsController, type: :controller do
   let(:user) { create :user }
-  let(:cart) { create :product }
+  let(:product) { create :product }
   let(:cart) { create :cart, user: user }
   let!(:item) { create :cart_item, cart: cart, product: product}
   let(:create_params) { { quantity: 1, product_id: product.id } }
@@ -24,11 +24,34 @@ RSpec.describe ItemsController, type: :controller do
     end
 
     context 'with invalid attributes' do
-      let(:create_params) { { quantity: 0}}
+      let(:create_params) { { quantity: 0} }
       it 'does not save items' do
         sign_in(user)
         expect { subject }.to_not change(user.cart.cart_items, :count)
       end
+    end
+  end
+
+  describe 'DELETE #destroy' do
+    let(:create_params) { { id: product.id, product_id: product.id } }
+
+    subject { delete :destroy, params: create_params }
+
+    it 'delete product from item' do
+      sign_in(user)
+      expect { subject }.to change(user.cart.cart_items, :count).by(-1)
+    end
+
+    it 'render template create' do
+      sign_in(user)
+      is_expected.to render_template :create
+    end
+
+    it 'get all products in cart' do
+      sign_in(user)
+      expect(controller.products)
+          .to include(have_attributes(product_id: product.id))
+
     end
   end
 end

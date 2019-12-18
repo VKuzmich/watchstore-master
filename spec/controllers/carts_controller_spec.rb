@@ -24,7 +24,7 @@ RSpec.describe CartsController, type: :controller do
       context 'delete from cart' do
         it 'delete product from cart' do
           sign_in(user)
-          expect { subject}.to change {user.reload.cart.present? }.to(false)
+          expect { subject }.to change { user.reload.cart.present? }.to(false)
         end
 
         it 'delete product from cart_items' do

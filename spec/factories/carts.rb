@@ -4,7 +4,7 @@ FactoryBot.define do
   factory :cart do
 
     association :user_id, factory: :user
-    #association :cart_items, factory: :cart_item
+    #association :product_ids, factory: :product
 
   end
 end
