@@ -62,7 +62,7 @@
                     <%= link_to 'cart_items', class: 'add-to-cart-link', data: { id: hit.id} do %>
                       <i></i>
                     <% end %>
-                    <span class=" item_price">$ <%= hit.price %></span>
+                    <span class="item_price">$ <%= hit.price %></span>
                     <% if hit.old_price %>
                       <small><del>$ <%= hit.old_price %></del></small>
                     <% end %>
@@ -82,4 +82,4 @@
     </div>
   </div>
 <% end %>
-<!--<input type="hidden" value="<%#= !current_user.nil? ? 88 : 99 %>" id="cart_access" />-->
+<input type="hidden" value="<%= !current_user.nil? ? 88 : 99 %>" id="cart_access" />

@@ -43,14 +43,14 @@
           <td>Totally: </td>
           <td colspan="4" class="text-right cart-sum"><%= format("%.2f", sum.sum) %> $</td>
         </tr>
-        </tbody>
 
+        </tbody>
       </table>
     </div>
   <% else %>
     <h3>Cart is Empty</h3>
   <% end %>
 <% else %>
-  <span>Please, sign in to view the cart!</span>
-  <script>$('#cart .modal-footer a, #cart modal-footer .btn-danger').css('display', 'none');</script>
+  <span>Please sign in! To view the cart. </span>
+<!--  <script>$('#cart .modal-footer a, #cart .modal-footer .btn-danger').css('display', 'none');</script>-->
 <% end %>

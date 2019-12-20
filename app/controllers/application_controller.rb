@@ -12,6 +12,7 @@ class ApplicationController < ActionController::Base
 
   def cart_total
     return 0 if cart_items.none?
+
     cart_items
       .joins(:product)
       .select('(cart_items.quantity * products.price) as total')

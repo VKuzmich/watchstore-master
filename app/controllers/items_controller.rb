@@ -12,6 +12,7 @@ class ItemsController < ApplicationController
   end
 
   private
+
   def item_params
     params.permit(:product_id, :quantity)
   end

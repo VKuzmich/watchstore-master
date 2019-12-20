@@ -51,7 +51,6 @@ RSpec.describe ItemsController, type: :controller do
       sign_in(user)
       expect(controller.products)
           .to include(have_attributes(product_id: product.id))
-
     end
   end
 end
