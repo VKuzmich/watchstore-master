@@ -3,6 +3,8 @@
 require 'rails_helper'
 
 RSpec.describe ItemsController, type: :controller do
+  render_views
+
   let(:user) { create :user }
   let(:product) { create :product }
   let(:cart) { create :cart, user: user }

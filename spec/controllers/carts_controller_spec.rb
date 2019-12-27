@@ -13,7 +13,7 @@ RSpec.describe CartsController, type: :controller do
   describe 'GET #show' do
     subject { get :show }
 
-    it 'render view' do
+    it 'render show view' do
       sign_in(user)
       is_expected.to render_template :show
       expect(response.body).to include(product.title)

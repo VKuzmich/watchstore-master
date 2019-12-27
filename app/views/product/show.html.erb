@@ -16,22 +16,22 @@
         <div class="sngl-top">
           <div class="col-md-5 single-top-left">
 
-            <%#= unless @product.galleries == [] %>
-<!--              <div class="flexslider">-->
-<!--                <ul class="slides">-->
-                  <%# @product.galleries.each do |item| %>
-<!--                    <li data-thumb="<%#= asset_path item['img'] %>">-->
-<!--                      <div class="thumb-image">-->
-<!--                        <img src="<%#= asset_path item['img'] %>" data-imagezoom="true"-->
-<!--                             class="img-responsive" alt="" />-->
+            <% unless @product.galleries == [] %>
+              <div class="flexslider">
+                <ul class="slides">
+                  <% @product.galleries.each do |item| %>
+                    <li data-thumb="<%= asset_path item['img'] %>">
+                      <div class="thumb-image">
+                        <img src="<%= asset_path item['img'] %>" data-imagezoom="true"
+                             class="img-responsive" alt="" />
 
-<!--                      </div>-->
-<!--                    </li>-->
-                  <%# end %>
-<!--                </ul>-->
-<!--              </div>-->
+                      </div>
+                    </li>
+                  <% end %>
+                </ul>
+              </div>
 
-            <%# else %>
+            <% else %>
 
               <div class="flexslider">
                 <ul class="slides">
@@ -47,12 +47,12 @@
                 </ul>
               </div>
 
-            <%# end %>
+            <% end %>
 
           </div>
           <div class="col-md-7 single-top-right">
             <div class="single-para simpleCart_shelfItem">
-              <h2><%=@product.title %></h2>
+              <h2><%= @product.title %></h2>
               <div class="star-on">
                 <ul class="star-footer">
                   <li><a href="#"><i> </i></a></li>
@@ -95,7 +95,8 @@
 
               <ul class="tag-men">
                 <li><span>CATEGORY</span>
-                  <strong>:
+                  <strong>: <a href="/category/<%= @product.category.bytitle %>" style="...">
+                    <%= @product.category.title %></a>
                   </strong>
                 </li>
               </ul>
@@ -171,7 +172,8 @@
                       <h3><a href="<%= related.id %>"><%= related.title %></a></h3>
                       <p>Explore Now</p>
                       <h4>
-                        <a class="item_add add-to-cart-link" href="cart/add?id=<%=related.id %>" data-id="<%=related.id %>"><i></i>
+                        <a class="item_add add-to-cart-link" href="cart/add?id=<%=related.id %>"
+                           data-id="<%=related.id %>"><i></i>
                         </a>
                         <span class=" item_price">$ <%= related.price %></span>
                         <% if related.old_price %>

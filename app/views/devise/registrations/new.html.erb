@@ -9,7 +9,6 @@
   </div>
 </div>
 
-
 <div class="prdt">
   <div class="container">
     <div class="prdt-top">
@@ -17,7 +16,6 @@
         <div class="product-one signup">
           <div class="register-top heading">
             <h2>REGISTER</h2>
-
           </div>
 
           <div class="register-main">
@@ -48,11 +46,10 @@
                 <%= f.button :submit, "Sign up", class: "btn btn-default" %>
 
               <% end %>
+
+              <p><%= render "devise/shared/links" %></p>
             </div>
           </div>
-
-          <p><%= render "devise/shared/links" %></p>
-
         </div>
       </div>
     </div>

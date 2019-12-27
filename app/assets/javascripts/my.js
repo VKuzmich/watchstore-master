@@ -79,12 +79,12 @@ $('#cart .modal-body').on('click', '.del-item', function(){
 });
 
 function showCart(cart) {
-    if($.trim(cart) == '<td>Cart is empty</td>td>'){
+    if($.trim(cart) == '<td>Cart is empty</td>'){
         $('#cart .modal-footer a, #cart .modal-footer .btn-danger').css('display', 'none');
     }else{
         $('#cart .modal-footer a, #cart .modal-footer .btn-danger').css('display', 'inline-block');
     }
-    $('#cart .modal-footer').html(cart);
+    $('#cart .modal-body').html(cart);
     $('#cart').modal();
     if($('.cart-sum').text()){
         $('.simpleCart_total').html($('#cart .cart-sum').text());

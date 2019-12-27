@@ -6,7 +6,9 @@ class ProductController < ApplicationController
     @product = Product.find(params[:id])
     set_page_options
   end
+
   helper_method :recent_products
+
   attr_accessor :product
 
   def recent_products
@@ -15,14 +17,14 @@ class ProductController < ApplicationController
   end
 
   def recently
-    session[:viewed_product] ||= []
+    session[:viewed_products] ||= []
   end
 
   def register_visit
-    session[:viewed_product] ||= []
-    session[:viewed_product] = ([@product.id] + session[:viewed_product])
-                                   .uniq
-                                   .take(3)
+    session[:viewed_products] ||= []
+    session[:viewed_products] = ([@product.id] + session[:viewed_products])
+                                .uniq
+                                .take(3)
   end
 
   def set_page_options

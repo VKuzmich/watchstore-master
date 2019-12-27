@@ -24,15 +24,15 @@
     <div class="container">
       <div class="about-top grid-1">
         <% @brands.each do |f| %>
-        <div class="col-md-4 about-left">
-          <figure class="effect-budda">
-            <%= image_tag(f.img, alt: "", class: "img-responsive" ) %>
-            <figcaption>
-              <h2><%= f.title %></h2>
-              <p><%= f.description %></p>
-            </figcaption>
-          </figure>
-        </div>
+          <div class="col-md-4 about-left">
+            <figure class="effect-budda">
+              <%= image_tag(f.img, alt: "", class: "img-responsive" ) %>
+              <figcaption>
+                <h2><%= f.title %></h2>
+                <p><%= f.description %></p>
+              </figcaption>
+            </figure>
+          </div>
         <% end %>
         <div class="clearfix"></div>
       </div>
@@ -52,14 +52,14 @@
             <div class="col-md-3 product-left">
               <div class="product-main simpleCart_shelfItem">
                 <a href="product/<%=hit.id %>" class="mask">
-                  <%= image_tag(hit.img, als: "", class: "img-responsive zoom-img" ) %>
+                  <%= image_tag(hit.img, alt: "", class: "img-responsive zoom-img" ) %>
                 </a>
                 <%= %>
                 <div class="product-bottom">
-                  <h3><a href="product/<%= hit.id %>"></a></h3>
+                  <h3><a href="product/<%= hit.id %>"><%= hit.title %></a></h3>
                   <p>Explore Now</p>
                   <h4>
-                    <%= link_to 'cart_items', class: 'add-to-cart-link', data: { id: hit.id} do %>
+                    <%= link_to cart_items_path(id: hit.id), class: 'add-to-cart-link', data: { id: hit.id} do %>
                       <i></i>
                     <% end %>
                     <span class="item_price">$ <%= hit.price %></span>
@@ -74,7 +74,7 @@
               </span>
                 </div>
               </div>
-            </div>
+             </div>
           <% end %>
           <div class="clearfix"></div>
         </div>

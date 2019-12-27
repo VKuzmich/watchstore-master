@@ -11,14 +11,14 @@
 
 <div class="prdt">
   <div class="container">
-    <div class="prdt-main">
+    <div class="prdt-top">
       <div class="col-md-9 prdt-left">
         <% if !@category.products.empty? %>
           <div class="product-one">
             <% @category.products.each do |product| %>
               <div class="col-md-4 product-left p-left">
                 <div class="product-main simpleCart_shelfItem">
-                  <%= link_to(image_tag(product.img, alt: "", class: "img-responsice zoom-img"), product, class: "mask") %>
+                  <%= link_to(image_tag(product.img, alt: "", class: "img-responsive zoom-img"), product, class: "mask") %>
                     <div class="product-bottom">
                       <h3><%= product.title %></h3>
                       <p>Explore Now</p>
@@ -39,7 +39,7 @@
             <div class="clearfix"></div>
           </div>
         <% else %>
-          <h3>In this category there is no products...</h3>
+          <h3>In this category there is no products yet...</h3>
         <% end %>
       </div>
       <div class="col-md-3 prdt-right">
