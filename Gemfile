@@ -33,6 +33,8 @@ group :development, :test do
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
   gem 'database_cleaner', '~> 1.7'
   gem 'factory_bot', '~> 5.1', '>= 5.1.1'
+  gem 'pry'
+  gem 'pry-byebug'
   gem 'rails-controller-testing', '~> 1.0', '>= 1.0.4'
   gem 'rb-readline', '~> 0.5.5'
   gem 'rspec', '~> 3.9'

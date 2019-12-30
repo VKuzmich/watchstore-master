@@ -7,7 +7,7 @@
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
       <jdbc-url>jdbc:postgresql://localhost:5432/watchstore_development</jdbc-url>
     </data-source>
-    <data-source source="LOCAL" name="watchstore_test@localhost" uuid="ba3947a9-81cb-4cdb-9048-595a4cf8381f">
+    <data-source source="LOCAL" name="watchstore_test@localhost" uuid="eac6d1d9-7781-4fa8-9145-e59960fbd9ea">
       <driver-ref>postgresql</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
