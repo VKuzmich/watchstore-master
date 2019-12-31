@@ -7,10 +7,10 @@ module UserOath
 
   class_methods do
     def find_for_oauth(auth)
-      authorizations = Authorization
+      authorization = Authorization
                        .where(provider: auth.provider, uid: auth.uid)
                        .first
-      return authorizations.user if authorizations
+      return authorization.user if authorization
 
       email = auth.info[:email]
       user = User.where(email: email).first
@@ -27,6 +27,7 @@ module UserOath
 
         user.create_authorization(auth)
       end
+      user
     end
 
     def create_email(auth)
