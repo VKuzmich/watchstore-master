@@ -3,6 +3,7 @@
     <words>
       <w>activestorage</w>
       <w>bootsnap</w>
+      <w>byebug</w>
       <w>capybara</w>
       <w>chromedriver</w>
       <w>easydrop</w>
@@ -17,6 +18,7 @@
       <w>mystyle</w>
       <w>omniauth</w>
       <w>responsiveslides</w>
+      <w>successfull</w>
       <w>turbolinks</w>
       <w>typeaheader</w>
       <w>uglifier</w>
