@@ -5,6 +5,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.6.3'
 
+gem 'active_model_serializers'
 gem 'activestorage'
 gem 'ancestry'
 gem 'bootstrap-sass'
