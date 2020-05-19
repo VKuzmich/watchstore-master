@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+    <data-source source="LOCAL" name="watchstore_development@localhost" uuid="f8569386-a10a-4fa3-93d3-dd4eb15184c5">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://localhost:5432/watchstore_development</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="watchstore_test@localhost" uuid="eac6d1d9-7781-4fa8-9145-e59960fbd9ea">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://localhost:5432/watchstore_test</jdbc-url>
+    </data-source>
+  </component>
+</project>
