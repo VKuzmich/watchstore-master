@@ -8,6 +8,7 @@ ruby '2.7.1'
 gem 'active_model_serializers'
 gem 'activestorage'
 gem 'ancestry'
+gem "aws-sdk-s3", require: false
 gem 'bootstrap-sass'
 gem 'breadcrumbs_on_rails'
 gem 'coffee-rails'
